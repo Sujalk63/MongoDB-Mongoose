@@ -1,0 +1,79 @@
+in this tutorial we will be learning data modelling of different things. Data modeling with Mongoose involves defining the structure and behavior of your data when interacting with MongoDB, a NoSQL database. Mongoose provides a way to create models and schemas, allowing you to define how your data should be structured, what fields it contains, their types, default values, validation rules, and other constraints. These models and schemas serve as blueprints for creating, reading, updating, and deleting documents in your MongoDB collections.
+
+step 1 - create a file user.models.js where models dosent make any changes it's just a standard practice, for controllers to take data the file name is kept as user.controller.js, basically these files inside the todos are characters of the todo which are the user.model.js and user.model.js 
+
+step 2 - import mongoose in the file 
+
+step 3- creating a schema of your todos, sub_todos, user schema etc
+
+step 4 - creating and exporting models so that it can be used by other files 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------building blocks -----------------------------
+
+
+
+
+1) the below is a document and collection of different document is called collection of documents 
+
+
+{
+  "_id": ObjectId("5f7a1c8d1c31a65c4b548e4c"),
+  "username": "john_doe",
+  "email": "johndoe@example.com",
+  "age": 30,
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "zipcode": "12345"
+  }
+}
+
+
+2) the below is the schema of the documne tbasically defining the structure of the documents may its type, validity etc 
+
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const userSchema = new Schema({
+  username: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  age: {
+    type: Number,
+    required: true
+  },
+  address: {
+    street: String,
+    city: String,
+    zipcode: String
+  }
+});
+
+const User = mongoose.model('User', userSchema);
+
+
+3) what is a model ?
+
+A model in Mongoose helps you perform various operations on the MongoDB collection(document collection) associated with that model. It provides a high-level interface to interact with the database.
