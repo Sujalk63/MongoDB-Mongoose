@@ -24,7 +24,12 @@ const hospitalSchema = new mongoose.Schema({
         {
             type:String,
         }
-    ]
+    ],
+    icuAvailability:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref: "Icu",
+        default: "Available"
+    }
 }, {timestamps:true});
 
 export const Hospital = mongoose.model("Hospital", hospitalSchema)
