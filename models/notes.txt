@@ -8,6 +8,10 @@ step 3- creating a schema of your todos, sub_todos, user schema etc
 
 step 4 - creating and exporting models so that it can be used by other files 
 
+step 5 - crating schema and models for all the files
+
+Step 6 - make relations by refferencing and by specifying a special type
+
 
 
 
