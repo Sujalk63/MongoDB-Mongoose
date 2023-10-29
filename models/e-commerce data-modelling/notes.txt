@@ -1,0 +1,4 @@
+Step 1-  for e-commerce what kind of characters we would have - user, categories, product, order. So we would create document of these characters
+
+
+
